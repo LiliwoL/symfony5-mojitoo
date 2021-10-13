@@ -1,0 +1,18 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}New Places{% endblock %}
+
+{% block body %}
+    {{ include('geoloc/_get_geoloc.html.twig') }}
+
+    <div class="content hide">
+        <h1>Hmm, on veut ajouter un spot à Mojito?</h1>
+        <div class="results"></div>
+
+        <div id="map"></div>
+    </div>
+
+    {{ include('places/_form.html.twig') }}
+
+    <a href="{{ path('places_index') }}">back to list</a>
+{% endblock %}

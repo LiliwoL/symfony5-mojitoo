@@ -1,0 +1,28 @@
+<table class="table">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>DescShort</th>
+            <th>DescLong</th>
+            <th>Lat</th>
+            <th>Lng</th>
+        </tr>
+    </thead>
+    <tbody>
+    {% for place in places %}
+        <tr>
+            <td>{{ place.id }}</td>
+            <td>{{ place.name }}</td>
+            <td>{{ place.descShort }}</td>
+            <td>{{ place.descLong }}</td>
+            <td>{{ place.lat }}</td>
+            <td>{{ place.lng }}</td>
+        </tr>
+    {% else %}
+        <tr>
+            <td colspan="7">no records found</td>
+        </tr>
+    {% endfor %}
+    </tbody>
+</table>

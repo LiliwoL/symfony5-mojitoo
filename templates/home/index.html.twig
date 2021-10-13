@@ -1,0 +1,14 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Mojitoo{% endblock %}
+
+{% block body %}
+    <div class="content hide">
+        <h1>Des bons mojitos pas loin?</h1>
+        <div class="results"></div>
+
+        <div id="map"></div>
+    </div>
+
+    {{ include('geoloc/_get_geoloc.html.twig') }}
+{% endblock %}

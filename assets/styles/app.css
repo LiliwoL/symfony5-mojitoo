@@ -1,0 +1,81 @@
+body {
+    background-color: lightgray;
+}
+
+/* Loader Animation */
+* {
+    box-sizing: border-box;
+}
+.loader {
+    animation: spin 2s infinite;
+    width: 25vw;
+    height: 25vw;
+    position: relative;
+    margin: auto;
+    top: calc(50vh - 12.5vw);
+    border-radius: 50%;
+    border: 2.8vw solid #e22608;
+}
+.loader:after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 0;
+    border: 2.27vw solid transparent;
+    border-bottom: 5vw solid #fff;
+    top: 2vw;
+    left: calc(50% - 2.1vw);
+}
+.loader:before {
+    content: '';
+    position: absolute;
+    width: 8.48vw;
+    height: 6.5vw;
+    background: #e22608;
+    -webkit-transform: rotate(66deg) skew(41.164deg);
+    -moz-transform: rotate(66deg) skew(41.164deg);
+    -o-transform: rotate(66deg) skew(41.164deg);
+    transform: rotate(66deg) skew(41.164deg);
+    top: calc(50% - 3.2vw);
+    left: 5.5vw;
+}
+@-moz-keyframes spin {
+    from {
+        transform: rotate(0);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+@-webkit-keyframes spin {
+    from {
+        transform: rotate(0);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+@-o-keyframes spin {
+    from {
+        transform: rotate(0);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+@keyframes spin {
+    from {
+        transform: rotate(0);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+#lat, #lng{
+    display: none;
+}
+
+/* ************************************ */
+
+/* Map Style */
+#map { height: 500px; }
